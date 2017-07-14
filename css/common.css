@@ -1,0 +1,226 @@
+@charset "utf-8";
+* {
+    font-family: 微软雅黑;
+    font-size: 12px;
+}
+
+body, div, dl, dt, ul, li, h1, h2, h3, h4, h5, h6, input, form, a, p, textarea {
+    margin: 0;
+    padding: 0
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    display: block
+}
+
+.clear-float {
+    zoom: 1
+}
+
+.clear-float:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+/* 以上是重置样式*/
+#leftsead {
+    width: 161px;
+    height: 290px;
+    position: fixed;
+    top: 350px;
+    right: 0px;
+    z-index: 100;
+}
+#leftsead img{width:46px; height: 46px;}
+
+#leftsead li {
+    width: 161px;
+    height: 50px;
+}
+
+#leftsead li img {
+    float: left;
+}
+
+#leftsead li a {
+    height: 46px;
+    float: right;
+    display: block;
+    min-width: 47px;
+    max-width: 161px;
+}
+
+#leftsead li a .shows {
+    display: block;
+}
+
+#leftsead li a .hides {
+    margin-right: -140px;
+    cursor: pointer;
+}
+
+
+
+.p1 {
+    width: 161px;
+    height: 46px;
+    background-color: #ff7a2a;
+    line-height: 42px;
+    color:#FFF;
+    font-size:16px;
+    text-align: center;
+    float: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+/*以上是侧边栏效果*/
+.public-header {
+    height: 35px;
+    background: #333
+}
+.container {
+    margin: 0 auto;
+    width: 1210px;
+}
+
+.header-left {
+    float: left;
+     line-height: 35px;
+}
+.header-left1 {
+    width: 260px;
+}
+.header-left1 p,.header-left1 a {
+    display: inline-block;
+    color: #fff;
+}
+.header-left1 strong {
+    color: #ed6c00;
+}
+
+.header-right {
+    float: right;
+    color:#fff;
+    line-height: 35px;
+}
+
+/*--------------导航-----------------*/
+.public-nav {
+    padding: 10px 0;
+}
+
+.nav-logo {
+    float: left;
+}
+
+.nav-logo a {
+    width: 229px;
+    height: 45px;
+    display: block;
+    text-indent: -9999px;
+    background: url("../images/head-logo.png") no-repeat;
+}
+.nav {
+    float: right;
+
+}
+.nav li {
+    float: left;
+    position: relative
+}
+
+.nav li a {
+    font-size: 16px;
+    color: #6e6e6e;
+    line-height: 45px;
+    padding: 0 50px;
+    display: inline-block
+}
+
+.nav a:hover {
+    color: #ed6c00
+}
+.nav li .sub-nav {
+    position: absolute;
+    background: rgba(255, 255, 255, .8);
+    top: 45px;
+    left: 16px;
+    font-size: 16px;
+    display: none;
+    z-index: 1;
+    border-top: 2px solid #ed6c00
+}
+
+.sub-nav li {
+    text-align: center;
+    clear: left;
+    width: 120px;
+}
+
+.sub-nav li a {
+    font-size: 14px;
+    line-height: 34px;
+    padding: 0;
+    display: inline-block
+}
+
+/*-----------------------底部代码-----------------------------------------*/
+.foot {
+    overflow: hidden
+}
+.public-foot {
+    background: #ddd;
+    padding: 20px 0;
+    overflow: hidden;
+}
+address {
+    float: left;
+    width: 340px;
+}
+
+address p {
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+}
+address span{font-size: 14px;}
+.public-foot-r {
+    width: 89px;
+    float: right
+}
+.public-foot-r img{margin-left: 3px;}
+.public-foot-r span, .public-foot-r p {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    line-height: 20px;
+}
+
+.public-bottom {
+    height: 35px;
+    background: #333
+}
+
+.public-bottom .public-bottom-l {
+    float: left;
+}
+
+.public-bottom .public-bottom-r {
+    float: right;
+}
+.public-bottom-r,.public-bottom-l{
+    line-height: 35px;
+    color: #fff;
+}

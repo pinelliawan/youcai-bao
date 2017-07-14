@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录，注册--完整家居</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+<!---------公共顶部---------->
+<div class="header">
+    <div class="public-header">
+        <div class="container clear-float">
+            <div class="header-left">
+                <div class="header-left1">
+                    <p>您好，欢迎来到 <strong>完整家居</strong>！</p>
+                    <a href="../html/login.html">登录 /</a> <a href="../html/register.html">注册</a>
+                </div>
+            </div>
+            <div class="header-right">
+                咨询热线：0571-86089292
+            </div>
+        </div>
+    </div>
+    <!--导航-->
+    <nav class="public-nav">
+        <div class="container clear-float">
+            <div class="nav-logo"><a href="#" title="完整家居">完整家居</a></div>
+            <ul class="nav">
+                <li><a href="../html/index.html">首页</a></li>
+                <li><a href="../html/qwbao-dongpen.html">全屋包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/qwbao-dongpen.html">东鹏整包</a></li>
+                        <li><a href="../html/qwbao-jianpai.html">箭牌整包</a></li>
+                        <li><a href="../html/qwbao-toto.html">TOTO整包</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/kjbao.html">空间包</a></li>
+                <li><a href="../html/tcbao.html">套餐包</a></li>
+                <li><a href="../html/tyguan.html">360体验馆</a></li>
+                <li><a href="../html/join_us.html" style="padding-right: 0;">合作加盟商</a></li>
+
+            </ul>
+            <script>
+                $(function () {
+                    $(".nav>li").hover(function () {
+                        $(this).children('ul').stop(true, true).show(300);
+                    }, function () {
+                        $(this).children('ul').stop(true, true).hide(300);
+                    })
+                })
+
+            </script>
+        </div>
+    </nav>
+    <!--导航-->
+</div>
+<!-----------中间-------------->
+<section class="s1">
+   <div class="section-dl">
+         <div class="denglu">
+              <p>会员登录<span><a href="#">免费注册</a></span></p>
+              <input type="text" placeholder="用户名" class="name">
+              <input type="password" placeholder="请输入密码" class="password">
+              <p class="forget"><a href="../html/xiugmm.html">忘记密码</a> </p>
+             <input type="submit" value="提交" class="tijiao">
+         </div>
+   </div>
+</section>
+<!-----------------底部代码-------------------------->
+<div class="foot">
+    <div class="public-foot">
+        <div class="container">
+            <address>
+                <p><span>联系我们</span><br>
+                    地址：杭州市上城区南复路59号陶瓷品市场三厅四楼<br>
+                    电话：086-0571-86089292<br>
+                    传真：086-0571-86588673
+                </p>
+            </address>
+            <div class="public-foot-r">
+                <span>关注我们</span>
+                <img src="../images/ewm.png">
+                <p>扫描关注我们</p>
+            </div>
+        </div>
+    </div>
+    <div class="public-bottom">
+        <div class="container">
+            <p class="public-bottom-l">
+                版权所有：优采宝(杭州)网络科技有限公司
+            </p>
+            <p class="public-bottom-r">
+                浙ICP备15039099号-1
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

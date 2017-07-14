@@ -1,0 +1,585 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/quick_links.js"></script>
+    <title>空间包--完整家居</title>
+    <style type="text/css">
+        html, body {
+            cursor: pointer;
+        }
+
+        .m-top {
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+            border-left-width: 5px;
+            border-radius: 3px;
+            border-left-color: #f0ad4e;
+        }
+
+        .m-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #000;
+            z-index: 2000;
+            width: 35px;
+            height: 100%;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .m-sidebar .cart {
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            padding: 200px 0 0 0px;
+            top: 100px;
+        }
+
+        .m-sidebar .cart span {
+            display: block;
+            width: 20px;
+            margin: 0 auto;
+        }
+
+        .m-sidebar .cart i {
+            width: 35px;
+            height: 35px;
+            display: block;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1NTIxOERDMEREQTIxMUUzODE0RUUzMDk1QTM1RjhENiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1NTIxOERDMUREQTIxMUUzODE0RUUzMDk1QTM1RjhENiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU1MjE4REJFRERBMjExRTM4MTRFRTMwOTVBMzVGOEQ2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU1MjE4REJGRERBMjExRTM4MTRFRTMwOTVBMzVGOEQ2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+nUzVwwAAAShJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOGXXMUHZMNRB/BeL/UHyKkAYWGjlEBohb0MT+U8sxvCQ6Zg6UPgPETlD2Z2o4BhS8piQ45BcQs0HZ7cQ4gtSQ+Q3EP4hUyw2lnwDxOlKCkxjHmAExKxCLEGnmSiC2BeLJpCY0RiLbMzuB2JIIdd+AWBwaVSD6A7WzNjMQCwIxBxFqxaD0AlIdQkrIMBAZVRuhiV0NiG+T6hhSypktREQVqAjYR45DSHEMKKoEiChvngNxKrklJSOJDXJGKM2DRQ5k0Bd61k2weuYzFgxySBUQfwTiTiSH0yRkQFH6AErLQgtCZMAJzdrI/B+0DJm/UIwNgCzug4ZSLxD/pHWaGW1cjTpm1DGjjhl1DLUAQIABAK/XRO9Mpf8WAAAAAElFTkSuQmCC);
+        }
+
+        .u-flyer {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            position: fixed;
+            z-index: 9999;
+        }
+    </style>
+
+</head>
+<body id="home">
+<aside>
+    <ul>
+        <li><a href="#keting">客餐厅</a> </li>
+        <li><a href="#room"> 卧&nbsp;&nbsp;&nbsp;室</a></li>
+        <li><a href="#kitchen"> 厨&nbsp;&nbsp;&nbsp;房</a></li>
+        <li><a href="#bathroom"> 卫生间</a></li>
+        <li><a href="#yangtai">阳&nbsp;&nbsp;&nbsp;台</a></li>
+    </ul>
+</aside>
+<!--------------------公共头部导航----------------------------------->
+<div class="header">
+    <div class="public-header">
+        <div class="container clear-float">
+            <div class="header-left">
+                <div class="header-left1">
+                    <p>您好，欢迎来到 <strong>完整家居</strong>！</p>
+                    <a href="../html/login.html">登录 ｜</a> <a href="../html/register.html">注册</a>
+                </div>
+            </div>
+            <div class="header-right">
+                咨询热线：0571-86089292
+            </div>
+        </div>
+    </div>
+    <!--导航-->
+    <nav class="public-nav">
+        <div class="container clear-float">
+            <div class="nav-logo"><a href="#" title="完整家居">完整家居</a></div>
+            <ul class="nav">
+                <li><a href="../html/index.html">首页</a></li>
+                <li><a href="../html/qwbao-dongpen.html">全屋包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/qwbao-dongpen.html">东鹏整包</a></li>
+                        <li><a href="../html/qwbao-jianpai.html">箭牌整包</a></li>
+                        <li><a href="../html/qwbao-toto.html">TOTO整包</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/kjbao.html">空间包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/html-kj/dongpeng--kecan.html">客餐厅</a></li>
+                        <li><a href="../html/html-kj/dongpeng--woshi.html">卧室</a></li>
+                        <li><a href="../html/html-kj/dongpeng--chufang.html">厨房</a></li>
+                        <li><a href="../html/html-kj/dongpeng--weisheng.html">卫生间</a></li>
+                        <li><a href="../html/html-kj/dongpeng--yangtai.html">阳台</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/tcbao.html">套餐包</a></li>
+                <li><a href="../html/tyguan.html">360体验馆</a></li>
+                <li><a href="../html/join_us.html" style="padding-right: 0;">合作加盟商</a></li>
+
+            </ul>
+            <script>
+                $(function () {
+                    $(".nav>li").hover(function () {
+                        $(this).children('ul').stop(true, true).show(300);
+                    }, function () {
+                        $(this).children('ul').stop(true, true).hide(300);
+                    })
+                })
+
+            </script>
+        </div>
+    </nav>
+    <!--导航-->
+</div>
+<!------------------------中间---------------------------->
+<div class="public-contain  " >
+    <div class="public-contain-top">
+        您正在浏览：<a href="#">首页</a>><a href="#">空间包</a>
+    </div>
+    <div class="public-contain-main" id="keting">
+        <p class="spe"><span id="kecan">客餐厅</span></p>
+        <ul class="public-contain-main-ul">
+            <li class="public-contain-main-li big-img">
+                <a href="../html/html-kj/dongpeng--kecan.html" class="aa"><img src="../images/东鹏/整包/瓷砖/FG605391(600x600).jpg" class="img-aa"></a>
+                <div>
+                    <span>东鹏客餐厅包</span>
+                    <p>图示产品：40平方米</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center center-img">
+                <a href="../html/html-kj/jianpai--kecan.html" class="aa"><img src="../images/箭牌/整包/瓷砖/冰心印玉ACS272080.jpg" class="img-aa"></a>
+                <div>
+                    <span>箭牌客餐厅包</span>
+                    <p>图示产品：40平方米</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li big-img">
+                <a href="../html/html-kj/toto--kecan.html" class="aa"><img src="../images/toto/整包/瓷砖/FG605391(600x600).jpg" class="img-aa"></a>
+                <div>
+                    <span>TOTO客餐厅包</span>
+                    <p>图示产品：40平方米</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+        </ul>
+        <!--<ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>-->
+        <hr>
+    </div>
+    <div class="public-contain-main" id="room">
+        <p class="spe"><span>卧室</span></p>
+        <ul class="public-contain-main-ul">
+            <li class="public-contain-main-li home-right">
+                <a href="../html/html-kj/dongpeng--woshi.html" class="aa"><img src="../images/东鹏/整包/地板与开关/NF1101实物图.jpg" class="img-aa"></a>
+                <div>
+                    <span>东鹏卧室包</span>
+                    <p>图示产品：2件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center home-center">
+                <a href="../html/html-kj/jianpai--woshi.html" class="aa"><img src="../images/箭牌/整包/定制/NF1103实物图.jpg" class="img-aa"></a>
+                <div>
+                    <span>箭牌卧室包</span>
+                    <p>图示产品：2件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li home-left">
+                <a href="../html/html-kj/toto--woshi.html" class="aa"><img src="../images/toto/整包/定制/DSJ06Z.jpg" class="img-aa"></a>
+                <div>
+                    <span>TOTO卧室包</span>
+                    <p>图示产品：2件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+        </ul>
+        <!--<ul class="public-contain-main-ul">
+             <li class="public-contain-main-li small-img">
+                 <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                 <div>
+                     <span>卫生间包</span>
+                     <p>图示产品：**件</p>
+                     <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                 </div>
+             </li>
+             <li class="public-contain-main-li center small-center-img">
+                 <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                 <div>
+                     <span>卫生间包</span>
+                     <p>图示产品：**件</p>
+                     <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                 </div>
+             </li>
+             <li class="public-contain-main-li small-center-img-small">
+                 <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                 <div>
+                     <span>卫生间包</span>
+                     <p>图示产品：**件</p>
+                     <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                 </div>
+             </li>
+
+         </ul>-->
+        <hr>
+    </div>
+
+    <div class="public-contain-main" id="kitchen">
+        <p class="spe"><span>厨房</span></p>
+        <ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="../html/html-kj/dongpeng--chufang.html" class="aa"><img src="../images/东鹏/整包/厨电/S3201n.jpg" class="img-aa"></a>
+                <div>
+                    <span>东鹏厨房包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="../html/html-kj/jianpai--chufang.html" class="aa"> <img src="../images/箭牌/整包/厨电/JBS2T-OLCE309.jpg" class="img-aa"></a>
+                <div>
+                    <span>箭牌厨房包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="../html/html-kj/toto--chufang.html" class="aa"><img src="../images/toto/整包/厨电/摩恩-60402-1-厨房龙头.2895.jpg" class="img-aa"></a>
+                <div>
+                    <span>TOTO厨房包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>
+        <!--<ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>-->
+        <hr>
+    </div>
+    <div class="public-contain-main" id="bathroom">
+        <p class="spe"><span>卫生间</span></p>
+        <ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="../html/html-kj/dongpeng--weisheng.html" class="aa"><img src="../images/东鹏/整包/卫浴/zc-wy1.jpg"  class="img-aa"></a>
+                <div>
+                    <span>东鹏卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="../html/html-kj/jianpai--weisheng.html" class="aa"><img src="../images/箭牌/整包/卫浴/1208md.jpg" class="img-aa"></a>
+                <div>
+                    <span>箭牌卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="../html/html-kj/toto--weisheng.html" class="aa"> <img src="../images/toto/整包/卫浴/TCF343CS.jpg" class="img-aa"></a>
+                <div>
+                    <span>TOTO卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>
+        <!--<ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>-->
+        <hr>
+    </div>
+    <div class="public-contain-main" id="yangtai">
+        <p class="spe"><span>阳台</span></p>
+        <ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="../html/html-kj/dongpeng--yangtai.html" class="aa"><img src="../images/toto/整包/瓷砖/ln63825.jpg" class="img-aa"></a>
+                <div>
+                    <span>东鹏阳台包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="../html/html-kj/jianpai--yangtai.html" class="aa"><img src="../images/箭牌/瓷砖（箭牌）/AW63674R.jpg" class="img-aa"></a>
+                <div>
+                    <span>箭牌阳台包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="../html/html-kj/toto--yangtai.html" class="aa"><img src="../images/toto/整包/瓷砖/ln63825.jpg" class="img-aa"></a>
+                <div>
+                    <span>TOTO阳台包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>
+        <!--<ul class="public-contain-main-ul">
+            <li class="public-contain-main-li small-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li center small-center-img">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+            <li class="public-contain-main-li small-center-img-small">
+                <a href="#" class="aa"><img src="#" class="img-aa"></a>
+                <div>
+                    <span>卫生间包</span>
+                    <p>图示产品：**件</p>
+                    <a  href="javascript:;" class="add_cart_large btnCart"><img src="../images/guwu.png"> </a>
+                </div>
+            </li>
+
+        </ul>-->
+        <hr>
+    </div>
+
+ <!--   <div class="public-end">
+        <p> 下拉加载更多 </p>
+    </div>-->
+</div>
+        <div id="flyItem" class="fly_item"><img src="../images/guwu.png" width="40" height="40"></div>
+    </div>
+
+    <!--右侧贴边导航quick_links.js控制-->
+    <div class="mui-mbar-tabs">
+        <div class="quick_link_mian">
+            <div class="quick_links_panel">
+                <div id="quick_links" class="quick_links">
+                    <li>
+                        <a href="#" class="my_qlinks"><i class="setting"></i></a>
+                        <div class="ibar_login_box status_login">
+                            <div class="avatar_box">
+                                <p class="avatar_imgbox"><img src="../images/no-img_mid_.jpg"/></p>
+                                <ul class="user_info">
+                                    <li>用户名：sl19931003</li>
+                                    <li>级&nbsp;别：普通会员</li>
+                                </ul>
+                            </div>
+                            <div class="login_btnbox">
+                                <a href="#" class="login_order">我的订单</a>
+                                <a href="#" class="login_favorite">我的收藏</a>
+                            </div>
+                            <i class="icon_arrow_white"></i>
+                        </div>
+                    </li>
+                    <li id="shopCart">
+                        <a href="#" class="message_list"><i class="message"></i>
+                            <div class="span">购物车</div>
+                            <span class="cart_num">0</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="history_list"><i class="view"></i></a>
+                        <div class="mp_tooltip" style=" visibility:hidden;">我的资产<i class="icon_arrow_right_black"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="mpbtn_histroy"><i class="zuji"></i></a>
+                        <div class="mp_tooltip">我的足迹<i class="icon_arrow_right_black"></i></div>
+                    </li>
+                    <li>
+                        <a href="#" class="mpbtn_wdsc"><i class="wdsc"></i></a>
+                        <div class="mp_tooltip">我的收藏<i class="icon_arrow_right_black"></i></div>
+                    </li>
+                    <li>
+                        <a href="#" class="mpbtn_recharge"><i class="chongzhi"></i></a>
+                        <div class="mp_tooltip">我要充值<i class="icon_arrow_right_black"></i></div>
+                    </li>
+                </div>
+                <div class="quick_toggle">
+                    <li>
+                        <a href="#"><i class="kfzx"></i></a>
+                        <div class="mp_tooltip">客服中心<i class="icon_arrow_right_black"></i></div>
+                    </li>
+                    <li>
+                        <a href="#none"><i class="mpbtn_qrcode"></i></a>
+                        <div class="mp_qrcode" style="display:none;">
+                            <img src="../images/weweima.png"
+                                                                          width="148" height="148"/><i
+                                class="icon_arrow_white"></i></div>
+                    </li>
+                    <li><a href="#top" class="return_top"><i class="top"></i></a></li>
+                </div>
+            </div>
+            <div id="quick_links_pop" class="quick_links_pop hide"></div>
+        </div>
+    </div>
+
+    <!--[if lte IE 8]>
+    <script src="../js/ieBetter.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../js/parabola.js"></script>
+    <script type="text/javascript">
+        $(".quick_links_panel li").mouseenter(function () {
+            $(this).children(".mp_tooltip").animate({left: -92, queue: true});
+            $(this).children(".mp_tooltip").css("visibility", "visible");
+            $(this).children(".ibar_login_box").css("display", "block");
+        });
+        $(".quick_links_panel li").mouseleave(function () {
+            $(this).children(".mp_tooltip").css("visibility", "hidden");
+            $(this).children(".mp_tooltip").animate({left: -121, queue: true});
+            $(this).children(".ibar_login_box").css("display", "none");
+        });
+        $(".quick_toggle li").mouseover(function () {
+            $(this).children(".mp_qrcode").show();
+        });
+        $(".quick_toggle li").mouseleave(function () {
+            $(this).children(".mp_qrcode").hide();
+        });
+
+        // 元素以及其他一些变量
+        var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector("#shopCart");
+        var numberItem = 0;
+        // 抛物线运动
+        var myParabola = funParabola(eleFlyElement, eleShopCart, {
+            speed: 900, //抛物线速度
+            curvature: 0.0008, //控制抛物线弧度
+            complete: function () {
+                eleFlyElement.style.visibility = "hidden";
+                eleShopCart.querySelector("span").innerHTML = ++numberItem;
+            }
+        });
+        // 绑定点击事件
+        if (eleFlyElement && eleShopCart) {
+
+            [].slice.call(document.getElementsByClassName("btnCart")).forEach(function (button) {
+                button.addEventListener("click", function (event) {
+// 滚动大小
+                    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+                            scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+                    eleFlyElement.style.left = event.clientX + scrollLeft + "px";
+                    eleFlyElement.style.top = event.clientY + scrollTop + "px";
+                    eleFlyElement.style.visibility = "visible";
+
+// 需要重定位
+                    myParabola.position().move();
+                });
+            });
+        }
+    </script>
+</div>
+<!-----------------底部代码-------------------------->
+<div class="foot">
+    <div class="public-foot">
+        <div class="container">
+            <address>
+                <p><span>联系我们</span><br>
+                    地址：杭州市上城区南复路59号陶瓷品市场三厅四楼<br>
+                    电话：086-0571-86089292<br>
+                    传真：086-0571-86588673
+                </p>
+            </address>
+            <div class="public-foot-r">
+                <span>关注我们</span>
+                <img src="../images/ewm.png">
+                <p>扫描关注我们</p>
+            </div>
+        </div>
+    </div>
+    <div class="public-bottom">
+        <div class="container">
+            <p class="public-bottom-l">
+                版权所有：优采宝(杭州)网络科技有限公司
+            </p>
+            <p class="public-bottom-r">
+                浙ICP备15039099号-1
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

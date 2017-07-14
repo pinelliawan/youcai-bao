@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery.min.js" type="text/javascript"></script>
+    <title>全屋包--完整家居</title>
+</head>
+<body>
+<!--侧边动态--代码开始-->
+<div id="leftsead">
+    <ul>
+        <li>
+            <a href="#" target="_blank">
+                <div class="hides" style="width:161px;display:none;" id="qq">
+                    <div class="hides p1">
+                        会员
+                        <img src="../../images/dt-1.png">
+                    </div>
+
+                </div>
+                <img src="../../images/dt-1.png" class="shows"/>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        购物车
+                        <img src="../../images/dt-2.png">
+                    </div>
+                </div>
+                <img src="../../images/dt-2.png" class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        计算器
+                        <img src="../../images/dt-3.png">
+                    </div>
+                </div>
+                <img src="../../images/dt-3.png"class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        客服
+                        <img src="../../images/dt-4.png">
+                    </div>
+                </div>
+                <img src="../../images/dt-4.png" class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1" id="top_btn">
+                        返回顶部
+                        <img src="../../images/dt-5.png">
+                    </div>
+                </div>
+                <img src="../../images/dt-5.png"  class="shows"/>
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#leftsead a").hover(function () {
+            $(this).children("div.hides").show();
+            $(this).children("div.hides").animate({marginRight: '0px'}, 500, "swing");
+            $(this).children("img.shows").hide();
+        }, function () {
+            $(this).children("div.hides").animate({marginRight: '-163px'}, 0, function () {
+                $(this).hide();
+                $(this).next("img.shows").show();
+            });
+        });
+        $("#top_btn").click(function () {
+            if (scroll == "off") return;
+            $("html,body").animate({scrollTop: 0}, 600);
+        });
+    });
+
+</script>
+<!-- 代码 结束 -->
+<!---------公共顶部---------->
+<div class="header">
+    <div class="public-header">
+        <div class="container clear-float">
+            <div class="header-left">
+                <div class="header-left1">
+                    <p>您好，欢迎来到 <strong>完整家居</strong>！</p>
+                    <a href="../../html/login.html">登录 /</a> <a href="../../html/register.html">注册</a>
+                </div>
+            </div>
+            <div class="header-right">
+                咨询热线：0571-86089292
+            </div>
+        </div>
+    </div>
+    <!--导航-->
+    <nav class="public-nav">
+        <div class="container clear-float">
+            <div class="nav-logo"><a href="#" title="完整家居">完整家居</a></div>
+            <ul class="nav">
+                <li><a href="../../html/index.html">首页</a></li>
+                <li><a href="../../html/qwbao-dongpen.html">全屋包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../../html/qwbao-dongpen.html">东鹏整包</a></li>
+                        <li><a href="../../html/qwbao-jianpai.html">箭牌整包</a></li>
+                        <li><a href="../../html/qwbao-toto.html">TOTO整包</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../html/kjbao.html">空间包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html-kj/dongpeng--kecan.html">客餐厅</a></li>
+                        <li><a href="../html-kj/dongpeng--woshi.html">卧室</a></li>
+                        <li><a href="../html-kj/dongpeng--chufang.html">厨房</a></li>
+                        <li><a href="../html-kj/dongpeng--weisheng.html">卫生间</a></li>
+                        <li><a href="../html-kj/dongpeng--yangtai.html">阳台</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../html/tcbao.html">套餐包</a></li>
+                <li><a href="../../html/tyguan.html">360体验馆</a></li>
+                <li><a href="../../html/join_us.html" style="padding-right: 0;">合作加盟商</a></li>
+
+            </ul>
+            <script>
+                $(function () {
+                    $(".nav>li").hover(function () {
+                        $(this).children('ul').stop(true, true).show(300);
+                    }, function () {
+                        $(this).children('ul').stop(true, true).hide(300);
+                    })
+                })
+
+            </script>
+        </div>
+    </nav>
+    <!--导航-->
+</div>
+<!------------------------中间---------------------------->
+<div class="container content">
+    <div class="container-nav">
+        您正在浏览：<a href="../../html/index.html">首页></a><a href="../../html/kjbao.html">空间包></a><a href="../../html/html-kj/dongpeng--kecan.html">东鹏客餐厅包</a>
+    </div>
+    <div class="container-bg"></div>
+    <!-----------------瓷砖-------------------->
+    <div class="container-panel">
+        <div class="panel-a">
+            <input type="checkbox" value="瓷砖" class="put1">
+            <p>餐客厅</p>
+        </div>
+        <div class="join-r" id="div4">
+            <div id="div5">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../../images/东鹏/瓷砖（东鹏）/sssss.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：FG805392_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../../images/东鹏/整包/瓷砖/FG605391(600x600).jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：FG805391_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../../images/东鹏/瓷砖（东鹏）/YG602012%20(镜面POLISHED)600X600%20.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：YG805361_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function Cmd1(obj){
+                $("#div4>div").each(function(){
+                    $(this).hide();
+
+                });
+                $("#div" + obj.value).show();
+            }
+            $(function(){
+                $("#div4>div div:nth-child(3n)").css("margin-right","0")
+            })
+        </script>
+    </div>
+    <!--------------加入购物车----------------->
+    <div class="container-foot" id="top_div">
+        <div class="container-foot-a">
+            <div class="container-foot-al">
+                <input type="checkbox" value="全选" class="put2">
+                <p>全选</p>
+                <p>已选商品<span>***</span>件</p>
+            </div>
+            <div class="container-foot-ar">
+                <p>合计（不含运费）：<span>$9999</span></p>
+                <input type="submit" value="加入购物车">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+            /*window).scrollTop() 这里初始值是 零,即滚动条在最上面时，scrolltop的值是 零 */
+            /* 当滚动条在头尾之间时，scrolltop+window.height()+滚动条与最底部之间的距离（即剩余为显示的内容）==document.height()*/
+            var documentheight = parseFloat($(document).height());
+            if (documentheight - totalheight >= 300) {
+                /*所以这里的300是滚动条与最底部之间的距离（即剩余为显示的内容*/
+                $('#top_div').show().css("position","fixed");
+            } else {
+                $('#top_div').css("position","inherit")
+            }
+
+        });
+
+    </script>
+</div>
+<!-----------------公共底部代码-------------------------->
+<div class="foot">
+    <div class="public-foot">
+        <div class="container">
+            <address>
+                <p><span>联系我们</span><br>
+                    地址：杭州市上城区南复路59号陶瓷品市场三厅四楼<br>
+                    电话：086-0571-86089292<br>
+                    传真：086-0571-86588673
+                </p>
+            </address>
+            <div class="public-foot-r">
+                <span>关注我们</span>
+                <img src="../../images/ewm.png">
+                <p>扫描关注我们</p>
+            </div>
+        </div>
+    </div>
+    <div class="public-bottom">
+        <div class="container">
+            <p class="public-bottom-l">
+                版权所有：优采宝(杭州)网络科技有限公司
+            </p>
+            <p class="public-bottom-r">
+                浙ICP备15039099号-1
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

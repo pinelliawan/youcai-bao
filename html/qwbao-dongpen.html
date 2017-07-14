@@ -1,0 +1,921 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <title>全屋包--完整家居</title>
+</head>
+<body>
+<!--侧边动态--代码开始-->
+<div id="leftsead">
+    <ul>
+        <li>
+            <a href="#" target="_blank">
+                <div class="hides" style="width:161px;display:none;" id="qq">
+                    <div class="hides p1">
+                        会员
+                        <img src="../images/dt-1.png">
+                    </div>
+
+                </div>
+                <img src="../images/dt-1.png" class="shows"/>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        购物车
+                        <img src="../images/dt-2.png">
+                    </div>
+                </div>
+                <img src="../images/dt-2.png" class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        计算器
+                        <img src="../images/dt-3.png">
+                    </div>
+                </div>
+                <img src="../images/dt-3.png"class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        客服
+                        <img src="../images/dt-4.png">
+                    </div>
+                </div>
+                <img src="../images/dt-4.png" class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1" id="top_btn">
+                        返回顶部
+                        <img src="../images/dt-5.png">
+                    </div>
+                </div>
+                <img src="../images/dt-5.png"  class="shows"/>
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#leftsead a").hover(function () {
+            $(this).children("div.hides").show();
+            $(this).children("div.hides").animate({marginRight: '0px'}, 500, "swing");
+            $(this).children("img.shows").hide();
+        }, function () {
+            $(this).children("div.hides").animate({marginRight: '-163px'}, 0, function () {
+                $(this).hide();
+                $(this).next("img.shows").show();
+            });
+        });
+        $("#top_btn").click(function () {
+            if (scroll == "off") return;
+            $("html,body").animate({scrollTop: 0}, 600);
+        });
+    });
+
+</script>
+<!-- 代码 结束 -->
+<!---------公共顶部---------->
+<div class="header">
+    <div class="public-header">
+        <div class="container clear-float">
+            <div class="header-left">
+                <div class="header-left1">
+                    <p>您好，欢迎来到 <strong>完整家居</strong>！</p>
+                    <a href="../html/login.html">登录 /</a> <a href="../html/register.html">注册</a>
+                </div>
+            </div>
+            <div class="header-right">
+                咨询热线：0571-86089292
+            </div>
+        </div>
+    </div>
+    <!--导航-->
+    <nav class="public-nav">
+        <div class="container clear-float">
+            <div class="nav-logo"><a href="#" title="完整家居">完整家居</a></div>
+            <ul class="nav">
+                <li><a href="../html/index.html">首页</a></li>
+                <li><a href="../html/qwbao-dongpen.html">全屋包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/qwbao-dongpen.html">东鹏整包</a></li>
+                        <li><a href="../html/qwbao-jianpai.html">箭牌整包</a></li>
+                        <li><a href="../html/qwbao-toto.html">TOTO整包</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/kjbao.html">空间包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/html-kj/dongpeng--kecan.html">客餐厅</a></li>
+                        <li><a href="../html/html-kj/dongpeng--woshi.html">卧室</a></li>
+                        <li><a href="../html/html-kj/dongpeng--chufang.html">厨房</a></li>
+                        <li><a href="../html/html-kj/dongpeng--weisheng.html">卫生间</a></li>
+                        <li><a href="../html/html-kj/dongpeng--yangtai.html">阳台</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/tcbao.html">套餐包</a></li>
+                <li><a href="../html/tyguan.html">360体验馆</a></li>
+                <li><a href="../html/join_us.html" style="padding-right: 0;">合作加盟商</a></li>
+
+            </ul>
+            <script>
+                $(function () {
+                    $(".nav>li").hover(function () {
+                        $(this).children('ul').stop(true, true).show(300);
+                    }, function () {
+                        $(this).children('ul').stop(true, true).hide(300);
+                    })
+                })
+
+            </script>
+        </div>
+    </nav>
+    <!--导航-->
+</div>
+<!------------------------中间---------------------------->
+<div class="container content">
+    <div class="container-nav">
+        您正在浏览：<a href="../html/index.html">首页></a><a href="../html/qwbao-dongpen.html">全屋包></a><a href="../html/qwbao-dongpen.html"> 东鹏</a>
+    </div>
+    <div class="container-bg"></div>
+    <!-----------------卫浴-------------------->
+    <div class="container-panel">
+        <div class="panel-a">
+            <input type="checkbox" value="卫浴" class="put1">
+            <p>卫浴</p>
+            <select class="s2" onchange="Cmd(this)">
+                <option value="1">可选一</option>
+                <option value="2">可选二</option>
+            </select>
+        </div>
+        <div class="join-r" id="div0">
+            <div id="div1">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/卫浴/zc-wy1.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>连体坐便器</h3>
+                        <p>品牌：东鹏<br>
+                            型号：W1551A05TYQ<br>
+                            规格：300/400坑距<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/卫浴/w1551.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>浴室柜</h3>
+                        <p>品牌：东鹏<br>
+                            型号：JG0010791VQ<br>
+                            主柜：780*455*520mm<br>
+                            镜柜：750*145*750mm<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/卫浴/1881.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>台盆龙头</h3>
+                        <p>品牌：东鹏<br>
+                            型号：JJH1881D<br>
+                            特色：含排水，全铜<br>
+                            铸造主体<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/卫浴/jjh2210x.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>顶喷花洒</h3>
+                        <p>品牌：东鹏<br>
+                            型号：JJH2210X<br>
+                            规格：顶喷8寸<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/卫浴/d2226.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>五金件</h3>
+                        <p>品牌：东鹏<br>
+                            型号：JTF7001Q四件套<br>
+                            特色：全铜五金挂件<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/卫浴/0021.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>配件包</h3>
+                        <p>品牌：东鹏<br>
+                            配件：软管*１、角阀*5、<br>
+                            下水*1、地漏*2<br>
+                            洗衣机龙头*1、波纹管*1<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="div2" style="display: none;">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/卫浴（安华）/aB1351.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>连体座厕</h3>
+                        <p>品牌：安华<br>
+                            型号：AB1351D<br>
+                            规格：300/400坑距<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/卫浴（安华）/zc-wy1.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>浴室柜</h3>
+                        <p>品牌：安华<br>
+                            型号：ANPG3353G-A<br>
+                            规格：800*485*730mm<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/卫浴（安华）/2014_03_24_02012.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>台盆龙头</h3>
+                        <p>品牌：安华<br>
+                            型号：an1A1616C<br>
+                            特色：含排水，全铜<br>
+                            铸造主体<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/卫浴（安华）/zc-wy11.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>顶喷花洒</h3>
+                        <p>品牌：安华<br>
+                            型号：an2M1717C<br>
+                            规格：顶喷8寸<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/卫浴（安华）/Y-15-08-20_LXD-02226.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>东鹏五金件</h3>
+                        <p>品牌：东鹏<br>
+                            型号：JTF7001Q四件套<br>
+                            特色：全铜五金挂件<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/卫浴（安华）/洗衣机地漏.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>东鹏配件包</h3>
+                        <p>品牌：东鹏<br>
+                            配件：软管*１、角阀*5、<br>
+                            下水*1、地漏*2<br>
+                            洗衣机龙头*1、波纹管*1<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function Cmd(obj){
+                $("#div0>div").each(function(){
+                    $(this).hide();
+
+                });
+                $("#div" + obj.value).show();
+            }
+            $(function(){
+                $("#div0>div div:nth-child(3n)").css("margin-right","0")
+            })
+        </script>
+    </div>
+    <!-----------------吊顶------------------->
+    <div class="container-panel">
+        <div class="panel-a">
+            <input type="checkbox" value="吊顶" class="put1">
+            <p>吊顶</p>
+        </div>
+        <div class="join-r" id="div8">
+            <div class="panel">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/吊顶/qdp5016c.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>浴霸</h3>
+                        <p>品牌：奥普<br>
+                            型号：QDP5016C<br>
+                            规格：300*600*140mm<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/吊顶/ztl810b.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>LED照明灯</h3>
+                        <p>品牌：奥普<br>
+                            型号：ZTL810B<br>
+                            规格：300*300mm<br>
+                            数量：2件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/吊顶/af002.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>集成吊顶扣板</h3>
+                        <p>品牌：奥普<br>
+                            型号：TKB-01扣板<br>
+                            AF002钛空银<br>
+                            规格：300*300*0.58mm<br>
+                            数量：14平方米
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function(){
+                    $("#div8>div div:nth-child(3n)").css("margin-right","0")
+                })
+            </script>
+        </div>
+    </div>
+    <!-----------------瓷砖-------------------->
+    <div class="container-panel">
+        <div class="panel-a">
+            <input type="checkbox" value="瓷砖" class="put1">
+            <p>瓷砖</p>
+            <select class="s2" onchange="Cmd1(this)">
+                <option value="5">可选一</option>
+                <option value="6">可选二</option>
+                <option value="7">可选三</option>
+                <option value="3">可选四</option>
+            </select>
+        </div>
+        <div class="join-r" id="div4">
+            <div id="div5">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/瓷砖/ln63825.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>墙砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LN63825_A<br>
+                            规格：300*300mm<br>
+                            面积：64平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/瓷砖/lf30825.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LP30825_A<br>
+                            规格：300*300mm<br>
+                            数量：22平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/瓷砖/FG605391(600x600).jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：FG805391_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="div6" style="display: none;">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/LN63846(600X300).jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>墙砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LN63846_A<br>
+                            规格：300*600mm<br>
+                            数量：64平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/LF30846(300X300).jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LP30846_A<br>
+                            规格：300*300mm<br>
+                            数量：22平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/YG602012%20(镜面POLISHED)600X600%20.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：YG805361_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="div7" style="display: none;">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/石痕63823%20拷贝.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>墙砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LN63823_A<br>
+                            规格：300*600mm<br>
+                            数量：64平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/石痕63823.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LP30823_A<br>
+                            规格：300*300mm<br>
+                            数量：22平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/wwa.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：FG805361_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="div3" style="display: none;">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/zc-wy199.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>墙砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LN30502_A<br>
+                            规格：300*600mm<br>
+                            数量：64平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/ssss.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：LP30502_A<br>
+                            规格：300*300mm<br>
+                            数量：22平方米
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/瓷砖（东鹏）/sssss.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>餐客厅/卧室地砖</h3>
+                        <p>品牌：东鹏<br>
+                            型号：FG805392_A<br>
+                            规格：800*800mm<br>
+                            数量：40平方米
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function Cmd1(obj){
+                $("#div4>div").each(function(){
+                    $(this).hide();
+
+                });
+                $("#div" + obj.value).show();
+            }
+            $(function(){
+                $("#div4>div div:nth-child(3n)").css("margin-right","0")
+            })
+        </script>
+    </div>
+    <!-----------------厨电-------------------->
+    <div class="container-panel">
+        <div class="panel-a">
+            <input type="checkbox" value="卫浴" class="put1">
+            <p>厨电</p>
+        </div>
+        <div class="join-r" id="div8">
+            <div class="panel">
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/厨电/S3201n.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>双槽+龙头</h3>
+                        <p>品牌：樱花<br>
+                            型号：ST-3201N<br>
+                            规格：760*420<br>
+                            735*390*R20mm<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/厨电/ww.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>嵌入式燃气灶</h3>
+                        <p>品牌：樱花<br>
+                            型号：SCG-6631SN<br>
+                            规格：740*430*145<br>
+                            674*358*R45mm<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div class="row-l">
+                        <img src="../images/东鹏/整包/厨电/SCR-3911FC.jpg">
+                    </div>
+                    <div class="row-r">
+                        <h3>欧式直吸式油烟机</h3>
+                        <p>品牌：樱花<br>
+                            型号：SCR-3911FC<br>
+                            规格：897*500*570mm<br>
+                            数量：1件
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function(){
+                    $("#div8>div div:nth-child(3n)").css("margin-right","0")
+                })
+            </script>
+        </div>
+    </div>
+    <!--------------地板与开关----------------->
+    <div class="container-panel">
+        <div class="panel-b">
+            <input type="checkbox" value="卫浴" class="put1">
+            <p>地板与开关</p>
+        </div>
+        <div class="panel2">
+            <div class="panel2-row">
+                <div class="row2-l"> <img src="../images/东鹏/整包/地板与开关/NF1101实物图.jpg"></div>
+                <div class="row2-r">
+                    <h3>强化复合地板</h3>
+                    <p>品牌：圣象e家<br>
+                        型号：NF1101<br>
+                        规格：1286*194*10mm<br>
+                        面积：25平方米
+                    </p>
+                </div>
+            </div>
+            <div class="panel2-row" style="margin-left: 10px;">
+                <div class="row2-l"> <img src="../images/东鹏/整包/地板与开关/wwww.jpg"></div>
+                <div class="row2-r">
+                    <h3>开关套餐</h3>
+                    <p>品牌：飞雕<br>
+                        规格：两室两厅<br>
+                        数量：1件
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------定制产品类----------------->
+    <div class="container-panel3">
+        <div class="panel-b">
+            <input type="checkbox" value="卫浴" class="put1">
+            <p>定制类产品</p>
+        </div>
+        <div class="container-dz">
+            <div class="dz-a">
+                <p>橱柜•志邦IK</p>
+            </div>
+            <div class="dz-b">
+                <div class="dz-row3">
+                    <div class="row3-a">
+                        <h4>台面三色可选</h4>
+                        <ul class="a-col">
+                            <li>
+                                <input id="check1" type="radio" name="check1">
+                                <div class="col-01">
+                                    <img src="../images/东鹏/整包/定制类产品/huang.jpg">
+                                    <label for="check1"><p>DT00001<br>黄金沙</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input id="check2" type="radio" name="check1">
+                                <div class="col-01">
+                                    <img src="../images/东鹏/整包/定制类产品/2.jpg">
+                                    <label for="check2"><p>DT00002<br>白冰晶</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input id="check3" type="radio" name="check1">
+                                <div class="col-01">
+                                    <img src="../images/东鹏/整包/定制类产品/3.jpg">
+                                    <label for="check3"><p>DT00003<br>黄茶玻</p></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row3-b">
+                        <h4>门板四色可选</h4>
+                        <ul class="b-col">
+                            <li>
+                                <input type="radio" id="check4" name="check2">
+                                <div class="col-02">
+                                    <img src="../images/东鹏/整包/定制类产品/DB00020枫木纹.jpg">
+                                    <label for="check4"><p>DB00020<br>枫木纹</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="check5" name="check2">
+                                <div class="col-02">
+                                    <img src="../images/东鹏/整包/定制类产品/DB00021松木纹.jpg">
+                                    <label for="check5"><p>DB00021<br>松木纹</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="check6" name="check2">
+                                <div class="col-02">
+                                    <img src="../images/东鹏/整包/定制类产品/DB00022棕木纹.jpg">
+                                    <label for="check6"><p>DB00022<br>棕木纹</p></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="check7" name="check2">
+                                <div class="col-02">
+                                    <img src="../images/东鹏/整包/定制类产品/DB00023锯切纹.jpg">
+                                    <label for="check7"><p>DB00023<br>锯切纹</p></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row3-c">
+                        <div class="row3-cl">
+                            <img src="../images/东鹏/整包/定制类产品/qqq.jpg">
+                        </div>
+                        <div class="row3-cr">
+                            <h3>志邦IK标准橱柜</h3>
+                            <p>型号：双饰面系列（3+1）<br>
+                                数量：1件
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-dz">
+            <div class="dz-a">
+                <p>木门•大自然</p>
+            </div>
+            <div class="dz-b">
+                <div class="dz-row3">
+                    <div class="row3-11">
+                        <div class="row3-11a">
+                            <ul class="c-col">
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check8" name="check3">
+                                        <img src="../images/东鹏/整包/定制类产品/木门１.jpg">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check9" name="check3">
+                                        <img src="../images/东鹏/整包/定制类产品/木门 2.jpg">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check10" name="check3">
+                                        <img src="../images/东鹏/整包/定制类产品/木门3.jpg">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check11" name="check3">
+                                        <img src="../images/东鹏/整包/定制类产品/木门4.jpg">
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4>四色可选</h4>
+                        </div>
+                        <div class="row3-11b">
+                            <img src="../images/东鹏/整包/定制类产品/DM-2401B-冰清玉洁.jpg">
+                        </div>
+                        <div class="row3-11c">
+                            <h3>免漆复合门<br>
+                                （含锁具/合页/门吸）</h3>
+                            <p>型号：DM-2401B<br>
+                                规格：2100*900*300mm<br>
+                                数量：2件
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row3-11" style="border-left: none">
+                        <div class="row3-11a">
+                            <ul class="c-col">
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check12" name="check4">
+                                        <img src="../images/东鹏/整包/定制类产品/木门１.jpg">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check13" name="check4">
+                                        <img src="../images/东鹏/整包/定制类产品/木门 2.jpg">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check14" name="check4">
+                                        <img src="../images/东鹏/整包/定制类产品/木门3.jpg">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-11a">
+                                        <input type="radio" id="check15" name="check4">
+                                        <img src="../images/东鹏/整包/定制类产品/木门4.jpg">
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4>四色可选</h4>
+                        </div>
+                        <div class="row3-11b">
+                            <img src="../images/东鹏/整包/定制类产品/电木门.jpg">
+                        </div>
+                        <div class="row3-11c">
+                            <h3>免漆复合门<br>
+                                （含锁具/合页/门吸）</h3>
+                            <p>型号：DM-2401<br>
+                                规格：2100*900*300mm<br>
+                                数量：2件
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------加入购物车----------------->
+
+    <div class="container-foot" id="top_div">
+        <div class="container-foot-a">
+            <div class="container-foot-al">
+                <input type="checkbox" value="全选" class="put2">
+                <p>全选</p>
+                <p>已选商品<span>***</span>件</p>
+            </div>
+            <div class="container-foot-ar">
+                <p>合计（不含运费）：<span>$9999</span></p>
+                <input type="submit" value="加入购物车">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+            /*window).scrollTop() 这里初始值是 零,即滚动条在最上面时，scrolltop的值是 零 */
+            /* 当滚动条在头尾之间时，scrolltop+window.height()+滚动条与最底部之间的距离（即剩余为显示的内容）==document.height()*/
+            var documentheight = parseFloat($(document).height());
+            if (documentheight - totalheight >= 300) {
+                /*所以这里的300是滚动条与最底部之间的距离（即剩余为显示的内容*/
+                $('#top_div').show().css("position","fixed");
+            } else {
+                $('#top_div').css("position","inherit")
+            }
+
+        });
+
+    </script>
+</div>
+<!-----------------公共底部代码-------------------------->
+<div class="foot">
+    <div class="public-foot">
+        <div class="container">
+            <address>
+                <p><span>联系我们</span><br>
+                    地址：杭州市上城区南复路59号陶瓷品市场三厅四楼<br>
+                    电话：086-0571-86089292<br>
+                    传真：086-0571-86588673
+                </p>
+            </address>
+            <div class="public-foot-r">
+                <span>关注我们</span>
+                <img src="../images/ewm.png">
+                <p>扫描关注我们</p>
+            </div>
+        </div>
+    </div>
+    <div class="public-bottom">
+        <div class="container">
+            <p class="public-bottom-l">
+                版权所有：优采宝(杭州)网络科技有限公司
+            </p>
+            <p class="public-bottom-r">
+                浙ICP备15039099号-1
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

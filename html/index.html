@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>完整家居</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/self.js" type="text/javascript"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--侧边动态--代码开始-->
+<div id="leftsead">
+    <ul>
+        <li>
+            <a href="#" target="_blank">
+                <div class="hides" style="width:161px;display:none;" id="qq">
+                    <div class="hides p1">
+                        会员
+                        <img src="../images/dt-1.png">
+                    </div>
+
+                </div>
+                <img src="../images/dt-1.png" class="shows"/>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        购物车
+                        <img src="../images/dt-2.png">
+                    </div>
+                </div>
+                <img src="../images/dt-2.png" class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        计算器
+                        <img src="../images/dt-3.png">
+                    </div>
+                </div>
+                <img src="../images/dt-3.png"class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1">
+                        客服
+                        <img src="../images/dt-4.png">
+                    </div>
+                </div>
+                <img src="../images/dt-4.png" class="shows"/>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <div class="hides" style="width:160px;display:none;">
+                    <div class="hides p1" id="top_btn">
+                        返回顶部
+                        <img src="../images/dt-5.png">
+                    </div>
+                </div>
+                <img src="../images/dt-5.png"  class="shows"/>
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#leftsead a").hover(function () {
+                $(this).children("div.hides").show();
+                $(this).children("div.hides").animate({marginRight: '0px'}, 500, "swing");
+                $(this).children("img.shows").hide();
+        }, function () {
+                $(this).children("div.hides").animate({marginRight: '-163px'}, 0, function () {
+                    $(this).hide();
+                    $(this).next("img.shows").show();
+                });
+        });
+        $("#top_btn").click(function () {
+            if (scroll == "off") return;
+            $("html,body").animate({scrollTop: 0}, 600);
+        });
+    });
+
+</script>
+<!-- 代码 结束 -->
+<!---------公共顶部---------->
+<div class="header">
+    <div class="public-header">
+        <div class="container clear-float">
+            <div class="header-left">
+                <div class="header-left1">
+                    <p>您好，欢迎来到 <strong>完整家居</strong>！</p>
+                    <a href="../html/login.html">登录 /</a> <a href="../html/register.html">注册</a>
+                </div>
+            </div>
+            <div class="header-right">
+                咨询热线：0571-86089292
+            </div>
+        </div>
+    </div>
+    <!--导航-->
+    <nav class="public-nav">
+        <div class="container clear-float">
+            <div class="nav-logo"><a href="#" title="完整家居">完整家居</a></div>
+            <ul class="nav">
+                <li><a href="../html/index.html">首页</a></li>
+                <li><a href="../html/qwbao-dongpen.html">全屋包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/qwbao-dongpen.html">东鹏整包</a></li>
+                        <li><a href="../html/qwbao-jianpai.html">箭牌整包</a></li>
+                        <li><a href="../html/qwbao-toto.html">TOTO整包</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/kjbao.html">空间包</a>
+                    <ul class="sub-nav">
+                        <li><a href="../html/html-kj/dongpeng--kecan.html">客餐厅</a></li>
+                        <li><a href="../html/html-kj/dongpeng--woshi.html">卧室</a></li>
+                        <li><a href="../html/html-kj/dongpeng--chufang.html">厨房</a></li>
+                        <li><a href="../html/html-kj/dongpeng--weisheng.html">卫生间</a></li>
+                        <li><a href="../html/html-kj/dongpeng--yangtai.html">阳台</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/tcbao.html">套餐包</a></li>
+                <li><a href="../html/tyguan.html">360体验馆</a></li>
+                <li><a href="../html/join_us.html" style="padding-right: 0;">合作加盟商</a></li>
+
+            </ul>
+            <script>
+                $(function () {
+                    $(".nav>li").hover(function () {
+                        $(this).children('ul').stop(true, true).show(300);
+                    }, function () {
+                        $(this).children('ul').stop(true, true).hide(300);
+                    })
+                })
+
+            </script>
+        </div>
+    </nav>
+    <!--导航-->
+</div>
+<!--------------------中间部分banner-------------------------------------->
+<div class="content">
+    <div class="banner">
+        <!-- 代码 开始 -->
+        <div id="solid">
+            <div class="solid0"></div>
+            <div class="solid1"></div>
+            <div class="solid2"></div>
+            <ul>
+                <li><img src="../images/bg.png"/></li>
+                <li><img src="../images/bg.png"/></li>
+                <li><img src="../images/bg.png"/></li>
+            </ul>
+            <div id="btt"><span></span> <span></span> <span></span></div>
+        </div>
+        <script src="../js/fordboy.js"></script>
+        <!-- 代码 结束 -->
+        <div class="container ban">
+            <div class="nav-ban">
+                <div class="nav-ban-left"><img src="../images/nav1.jpg"></div>
+                <div class="nav-ban-right">
+                    <h2>BIM平台</h2>
+                    <p>强大的平台，容易掌握<br>功能多样，效率优质</p>
+                </div>
+            </div>
+            <div class="nav-ban">
+                <div class="nav-ban-left"><img src="../images/nav2.jpg"></div>
+                <div class="nav-ban-right">
+                    <h2>标准家装</h2>
+                    <p>F2垂直平台<br>让家装选材更轻松</p>
+                </div>
+            </div>
+            <div class="nav-ban">
+                <div class="nav-ban-left"><img src="../images/nav3.jpg"></div>
+                <div class="nav-ban-right">
+                    <h2>一线主材</h2>
+                    <p>一线主材<br>品质保障，绿色环保</p>
+                </div>
+            </div>
+            <div class="nav-ban">
+                <div class="nav-ban-left"><img src="../images/nav4.jpg"></div>
+                <div class="nav-ban-right">
+                    <h2>品类齐全</h2>
+                    <p>十一大品类<br>套餐组合，无忧服务</p>
+                </div>
+            </div>
+            <div class="nav-ban">
+                <div class="nav-ban-left"><img src="../images/nav5.jpg"></div>
+                <div class="nav-ban-right">
+                    <h2>自建物流</h2>
+                    <p>自建仓储，材料统一配送<br>确保施工进度</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------中间部分panel----------------------------------->
+    <div class="index-panel1">
+        <div class="container index-panel-text">
+            <h1>极致主推</h1>
+            <p>三大主推，极致所选，让您的家精益求精</p>
+        </div>
+        <div class="index-panel1-bg">
+            <div class="index-panel1-info">
+                <ul>
+                    <li>
+                        <div class="panel-info-txt">
+                            <div class="tv_hot fl">
+                                <a href="../html/qwbao-dongpen.html" class="avatar" target="_blank" title="东鹏整包">
+                                    <img src="../images/zt-1.jpg" alt="东鹏整包">
+                                </a>
+                            </div>
+                            <a href="../html/qwbao-dongpen.html"><h1>东鹏整包</h1></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel-info-txt" style="margin: 0 10px">
+                            <a href="../html/qwbao-jianpai.html"><h1>箭牌整包</h1></a>
+                            <div class="tv_hot fl">
+                                <a href="../html/qwbao-jianpai.html" class="avatar" target="_blank" title="箭牌整包">
+                                    <img src="../images/zt-2.jpg" alt="箭牌整包">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel-info-txt">
+                            <div class="tv_hot fl">
+                                <a href="../html/qwbao-toto.html" class="avatar" target="_blank" title="TOTO整包">
+                                    <img src="../images/zt-3.jpg" alt="TOTO整包">
+                                </a>
+                            </div>
+                            <a href="../html/qwbao-toto.html"><h1>TOTO整包</h1></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="index-panel2">
+        <div class="container index-panel-text">
+            <h1>空间配置</h1>
+            <p>打造最适合您房型的空间配置方案，让您的家与众不同</p>
+        </div>
+        <div class="container index-panel2-list">
+            <div id="tab">
+                <div class="tabList">
+                    <ul>
+                        <li class="cur">客餐厅</li>
+                        <li>卧室</li>
+                        <li>厨房</li>
+                        <li>卫生间</li>
+                        <li>阳台</li>
+                    </ul>
+                </div>
+                <div class="tabCon">
+                    <div class="cur">
+                        <a href="#"><img src="../images/kj1.jpg"></a>
+                        <ul style="opacity: 1;">
+                            <li><strong>瓷砖</strong></li>
+                            <li>东鹏，华鹏，蒙娜丽莎，强辉</li>
+                            <li><strong>地板</strong></li>
+                            <li>大自然、贝尔、金钢柏林、生活家</li>
+                            <li><strong>开关插座</strong></li>
+                            <li>西门子</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#"><img src="../images/kj2.jpg"></a>
+                        <ul style="opacity: 1;">
+                            <li><strong>瓷砖</strong></li>
+                            <li>东鹏，华鹏，蒙娜丽莎，强辉</li>
+                            <li><strong>地板</strong></li>
+                            <li>大自然、贝尔、金钢柏林、生活家</li>
+                            <li><strong>开关插座</strong></li>
+                            <li>西门子</li>
+                            <li><strong>卧室门</strong></li>
+                            <li>派的、星星</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#"><img src="../images/kj3.jpg"></a>
+                        <ul style="opacity: 1;">
+                            <li><strong>天花吊顶</strong></li>
+                            <li>奥普、巴迪斯、欧斯宝</li>
+                            <li><strong>水槽龙头</strong></li>
+                            <li>沃根8090、普乐美</li>
+                            <li><strong>整体橱柜</strong></li>
+                            <li>海尔家居、沃根8090</li>
+                            <li><strong>开关插座</strong></li>
+                            <li>西门子</li>
+                            <li><strong>铝合金门</strong></li>
+                            <li>艾迪赛</li>
+                            <li><strong>瓷砖</strong></li>
+                            <li>东鹏，华鹏，蒙娜丽莎，强辉</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#"><img src="../images/kj4.jpg"></a>
+                        <ul style="opacity: 1;">
+                            <li><strong>天花吊顶</strong></li>
+                            <li>奥普、巴迪斯、欧斯宝</li>
+                            <li><strong>洁具</strong></li>
+                            <li>欧派、箭牌、恒洁、美标</li>
+                            <li><strong>开关插座</strong></li>
+                            <li>西门子</li>
+                            <li><strong>铝合金门</strong></li>
+                            <li>艾迪赛</li>
+                            <li><strong>瓷砖</strong></li>
+                            <li>东鹏，华鹏，蒙娜丽莎，强辉</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#"><img src="../images/kj5.jpg"></a>
+                        <ul style="opacity: 1;">
+                            <li><strong>瓷砖</strong></li>
+                            <li>东鹏，华鹏，蒙娜丽莎，强辉</li>
+                            <li><strong>开关插座</strong></li>
+                            <li>西门子</li>
+                            <li><strong>灯具</strong></li>
+                            <li>雷士</li>
+                            <li><strong>地漏</strong></li>
+                            <li>潜水艇</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $(".tabList ul li").click(function () {
+                    $(".tabCon ul").animate({opacity: 1}, 3000)
+                })
+                $(".tabCon ul li:nth-child(2n)").css("margin-bottom", "14px")
+                $(".tabCon ul li:nth-child(2n-1)").css("color", "#f0861d")
+            })
+        </script>
+    </div>
+    <div class="index-panel3">
+        <div class="index-panel3">
+            <div class="container index-panel-text">
+                <h1>品牌优势</h1>
+                <p>全系一线品牌，尽享豪华配置</p>
+            </div>
+            <div class="index-panel3-list">
+                <div class="container">
+                    <ul class="dd-pp">
+                        <li><a href="#" title="高仪"><img src="../images/pinp_01.jpg"></a></li>
+                        <li><a href="#" title="汉斯格雅"><img src="../images/pinp_02.jpg"></a></li>
+                        <li><a href="#" title="东鹏洁具"><img src="../images/pinp_03.jpg"></a></li>
+                        <li><a href="#" title="美标"><img src="../images/pinp_04.jpg"></a></li>
+                        <li><a href="#" title="法恩莎卫浴"><img src="../images/pinp_05.jpg"></a></li>
+                        <li><a href="#" title="ToTo"><img src="../images/pinp_06.jpg"></a></li>
+                        <li><a href="#" title="TATA木门"><img src="../images/pinp_07.jpg"></a></li>
+                        <li><a href="#" title="科勒木门"><img src="../images/pinp_08.jpg"></a></li>
+                        <li><a href="#" title="亚细亚瓷砖"><img src="../images/pinp_09.jpg"></a></li>
+                        <li><a href="#" title="金意陶瓷砖"><img src="../images/pinp_10.jpg"></a></li>
+                        <li><a href="#" title="大自然家居"><img src="../images/pinp_11.jpg"></a></li>
+                        <li><a href="#" title="圣象地板"><img src="../images/pinp_12.jpg"></a></li>
+                        <li><a href="#" title="箭牌瓷砖"><img src="../images/pinp_13.jpg"></a></li>
+                        <li><a href="#" title="奥普卫浴"><img src="../images/pinp_14.jpg"></a></li>
+                        <li><a href="#" title="书香门地"><img src="../images/pinp_15.jpg"></a></li>
+                        <li><a href="#" title="贝尔地板"><img src="../images/pinp_16.jpg"></a></li>
+                        <li><a href="#" title="美国摩恩"><img src="../images/pinp_17.jpg"></a></li>
+                        <li><a href="#" title="菲林格尔"><img src="../images/pinp_18.jpg"></a></li>
+                        <li><a href="#" title="安信地板"><img src="../images/pinp_19.jpg"></a></li>
+                        <li><a href="#" title="楚楚地板"><img src="../images/pinp_20.jpg"></a></li>
+                        <li><a href="#" title="西蒙"><img src="../images/pinp_21.jpg"></a></li>
+                        <li><a href="#" title="欧林"><img src="../images/pinp_22.jpg"></a></li>
+                        <li><a href="#" title="高宝"><img src="../images/pinp_23.jpg"></a></li>
+                        <li><a href="#" title="派的门"><img src="../images/pinp_24.jpg"></a></li>
+                        <li><a href="#" title="飞雕"><img src="../images/pinp_25.jpg"></a></li>
+                        <li><a href="#" title="欧铂丽"><img src="../images/pinp_26.jpg"></a></li>
+                        <li><a href="#" title="诺贝尔"><img src="../images/pinp_27.jpg"></a></li>
+                        <li><a href="#" title="樱花"><img src="../images/pinp_28.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------底部代码-------------------------->
+<div class="foot">
+    <div class="public-foot">
+        <div class="container">
+            <address>
+                <p><span>联系我们</span><br>
+                    地址：杭州市上城区南复路59号陶瓷品市场三厅四楼<br>
+                    电话：086-0571-86089292<br>
+                    传真：086-0571-86588673
+                </p>
+            </address>
+            <div class="public-foot-r">
+                <span>关注我们</span>
+                <img src="../images/ewm.png">
+                <p>扫描关注我们</p>
+            </div>
+        </div>
+    </div>
+    <div class="public-bottom">
+        <div class="container">
+            <p class="public-bottom-l">
+                版权所有：优采宝(杭州)网络科技有限公司
+            </p>
+            <p class="public-bottom-r">
+                浙ICP备15039099号-1
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
